@@ -1,6 +1,59 @@
 <html>
-<head> </head>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #43abe7, #ff18e1, #105587, #25aa6c);
+      background-size: 400% 400%;
+      animation: backgroundGradient 15s ease infinite;
+    }
+
+    #bryan {
+      width: 60px;
+      height: 60px;
+      border: 1px solid;
+      text-align: center;
+      position: relative;
+      animation: meuNomeEBryan 4s infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes meuNomeEBryan {
+      0% {
+        background-color: #7945c5;
+        transform: rotateY(3.142rad);
+      }
+      50% {
+        background-color: #58df48;
+      }
+      100% {
+        background-color: #7945c5;
+        transform: rotateY(-3.142rad);
+      }
+    }
+
+    @keyframes backgroundGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
 <body>
-  sim
+  <div id="bryan">Meu nome é bryan</div>
 </body>
 </html>
